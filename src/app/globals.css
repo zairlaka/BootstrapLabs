@@ -6,10 +6,36 @@
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-colorLightLime: #BFF747;
+  --color-colorButteryWhite: #FDFDE1;
+  --color-colorIvory: #FFFFF5;
+  --color-colorRedOrange: #FF4612;
+  --color-colorGondola: #1B1B1B;
+
+  /* Font Families */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-body: "Inter", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-clashGrotesk: "ClashGrotesk", sans-serif;
+  --font-familjenGrotesk: "Familjen Grotesk", sans-serif;
+  --font-arimo: "Arimo", sans-serif;
+  --font-libreBaskerville: "Libre Baskerville", serif;
+  --font-playfairDisplay: "Playfair Display", serif;
+  --font-bricolageGrotesque: "Bricolage Grotesque", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-epilogue: "Epilogue", sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+  --breakpoint-xxxl: 1600px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +48,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* Dark mode class support */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
