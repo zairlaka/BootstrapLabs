@@ -58,7 +58,7 @@ export default function Hero() {
                   </span>
                 </div>
                 <Link
-                  href="/contact"
+                  href="#contact"
                   className="btn-primary relative pr-20 md:pr-[118px]"
                 >
                   Book a free consultation

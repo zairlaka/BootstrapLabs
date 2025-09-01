@@ -23,7 +23,7 @@ export default function Header() {
           {/* Header Right Block */}
           <div className="flex items-center gap-x-6">
             <Link
-              href="/contact"
+              href="#contact"
               className="btn-primary relative hidden px-[30px] py-[10px] sm:inline-flex"
             >
               Contact Us
