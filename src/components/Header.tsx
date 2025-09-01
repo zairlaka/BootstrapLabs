@@ -10,33 +10,14 @@ export default function Header() {
           {/* Header Left Block */}
           <div className="flex items-center gap-x-10">
             {/* Header Logo */}
-            <Link href="/" className="h-auto w-auto">
+            <Link href="/" className="h-auto w-auto logo-text">
               <Image
-                src="/assets/img/logo-buttery-white.svg"
+                src="/assets/img/b-logo.webp"
                 alt="logo-buttery-white"
-                width={121}
-                height={24}
+                width={32}
+                height={34}
               />
             </Link>
-
-            {/* Header Navigation */}
-            <div className="menu-block-wrapper">
-              <div className="menu-overlay"></div>
-              <nav className="menu-block" id="append-menu-header">
-                <div className="mobile-menu-head">
-                  <div className="go-back">
-                    <Image
-                      src="/assets/img/icons/icon-caret-down.svg"
-                      alt="icon-caret-down"
-                      width={12}
-                      height={7}
-                    />
-                  </div>
-                  <div className="current-menu-title"></div>
-                  <div className="mobile-menu-close">&times;</div>
-                </div>
-              </nav>
-            </div>
           </div>
 
           {/* Header Right Block */}

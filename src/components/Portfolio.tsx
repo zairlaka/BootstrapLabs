@@ -47,73 +47,103 @@ const portfolioItems: PortfolioItem[] = [
 export default function Portfolio() {
   return (
     <section className="section-portfolio">
+      {/* Section Background */}
       <div className="bg-black">
+        {/* Section Space */}
         <div className="section-space">
+          {/* Section Container */}
           <div className="container">
-            {/* Section Block */}
             <div className="section-block mx-auto mb-10 max-w-[650px] text-center md:mb-[60px] xl:mb-20 xl:max-w-[856px]">
               <h2 className="jos text-colorButteryWhite">
-                Have a wide range of creative
+                Have a wide range of creative{" "}
                 <span>
                   projects
-                  <Image
-                    src="/assets/img/elemnts/shape-light-lime-5-arms-star.svg"
+                  <img
+                    src="assets/img/elemnts/shape-light-lime-5-arms-star.svg"
                     alt="shape-light-lime-5-arms-star"
-                    width={74}
-                    height={70}
+                    width="74"
+                    height="70"
                     className="inline-block h-auto w-8 md:w-10 lg:w-[57px]"
                   />
                 </span>
               </h2>
             </div>
+          </div>
 
-            {/* Portfolio Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {portfolioItems.map((item, index) => (
-                <div key={item.id} className="group">
-                  <div className="group relative overflow-hidden rounded-[20px] border-[5px] border-colorButteryWhite">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={516}
-                      height={390}
-                      className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
-                    />
-
-                    <div className="w-[calc(100%-48px)] absolute bottom-0 flex flex-col items-start gap-x-10 gap-y-8 p-6 sm:flex-row sm:items-center">
-                      <div className="max-w-[380px] flex-1 text-colorButteryWhite">
-                        <Link
-                          href={item.link}
-                          className="mb-[10px] block font-syne text-2xl font-bold leading-[1.4] group-hover:text-colorLightLime md:text-3xl"
+          {/* Project Slider Area */}
+          <div className="relative group/nav">
+            <div className="swiper projectSliderOne slider-center-inline">
+              <div className="swiper-wrapper">
+                {portfolioItems.map((project, index) => (
+                  <div key={index} className="swiper-slide">
+                    <div className="group relative overflow-hidden rounded-[20px] border-[5px] border-colorButteryWhite">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={516}
+                        height={390}
+                        className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
+                      />
+                      <div className="w-[calc(100%-48px)] absolute bottom-0 flex flex-col items-start gap-x-10 gap-y-8 p-6 sm:flex-row sm:items-center">
+                        <div className="max-w-[380px] flex-1 text-colorButteryWhite">
+                          <a
+                            href={project.link}
+                            className="mb-[10px] block font-syne text-2xl font-bold leading-[1.4] group-hover:text-colorLightLime md:text-3xl"
+                          >
+                            {project.title}
+                          </a>
+                          <p className="line-clamp-2">{project.description}</p>
+                        </div>
+                        <a
+                          href={project.link}
+                          className="relative inline-flex items-start justify-center overflow-hidden"
                         >
-                          {item.title}
-                        </Link>
-                        <p className="line-clamp-2">{item.description}</p>
+                          <img
+                            src="assets/img/icons/icon-buttery-white-arrow-right.svg"
+                            alt="icon-buttery-white-arrow-right"
+                            width="34"
+                            height="28"
+                            className="translate-x-0 opacity-100 transition-all duration-300 group-hover:translate-x-full group-hover:opacity-0"
+                          />
+                          <img
+                            src="assets/img/icons/icon-light-lime-arrow-right.svg"
+                            alt="light-lime-arrow-right"
+                            width="34"
+                            height="28"
+                            className="absolute -translate-x-full opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                          />
+                        </a>
                       </div>
-                      <Link
-                        href={item.link}
-                        className="relative inline-flex items-start justify-center overflow-hidden"
-                      >
-                        <Image
-                          src="/assets/img/icons/icon-buttery-white-arrow-right.svg"
-                          alt="icon-buttery-white-arrow-right"
-                          width={34}
-                          height={28}
-                          className="translate-x-0 opacity-100 transition-all duration-300 group-hover:translate-x-full group-hover:opacity-0"
-                        />
-                        <Image
-                          src="/assets/img/icons/icon-light-lime-arrow-right.svg"
-                          alt="light-lime-arrow-right"
-                          width={34}
-                          height={28}
-                          className="absolute -translate-x-full opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-                        />
-                      </Link>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* Navigation buttons */}
+            <div className="static xl:absolute w-full mt-16 xl:mt-0 z-20 flex justify-center xl:justify-between top-1/2 -translate-y-1/2 gap-x-10 px-10">
+              <div className="project-button-prev inline-flex h-14 w-14 rounded-[50%] items-center justify-center border-b-2 border-white bg-colorLightLime xl:opacity-0 group-hover/nav:opacity-100 xl:invisible group-hover/nav:visible xl:translate-x-10 group-hover/nav:translate-x-0 transition-all duration-300">
+                <img
+                  src="assets/img/icons/icon-black-arrow-right.svg"
+                  alt="icon-black-arrow-right"
+                  width="34"
+                  height="28"
+                  className="rotate-180"
+                />
+              </div>
+              <div className="project-button-next inline-flex h-14 w-14 rounded-[50%] items-center justify-center border-b-2 border-white bg-colorLightLime xl:opacity-0 group-hover/nav:opacity-100 xl:invisible group-hover/nav:visible xl:-translate-x-10 group-hover/nav:translate-x-0 transition-all duration-300">
+                <img
+                  src="assets/img/icons/icon-black-arrow-right.svg"
+                  alt="icon-black-arrow-right"
+                  width="34"
+                  height="28"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="container mt-10 md:mt-16 lg:mt-20">
+            <div className="swiper-pagination progressbar-green"></div>
           </div>
         </div>
       </div>

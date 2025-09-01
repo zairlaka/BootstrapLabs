@@ -92,3 +92,11 @@
 .offcanvas-body {
   transition: transform 0.3s ease;
 }
+
+.logo-text {
+  font-size: 1.72rem;
+  /* font-weight: 600; */
+  color: #FDFDE1;
+  display: inline-flex;
+  line-height: normal;
+}

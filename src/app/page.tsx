@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       <Header />
-      <main>
+      <main className="main-wrapper">
         <Hero />
         <Services />
         <div className="horizontal-line bg-[#e6e6e6]"></div>

@@ -11,9 +11,9 @@ export default function Hero() {
               {/* Left */}
               <div className="text-center text-colorButteryWhite lg:text-start">
                 <h1>
-                  A{" "}
+                  Bootstraped
                   <span className="inline-flex items-center gap-5">
-                    creative
+                    Labs
                     <Image
                       src="/assets/img/elemnts/shape-light-lime-5-arms-star.svg"
                       alt="Star"
@@ -21,8 +21,7 @@ export default function Hero() {
                       height={70}
                       className="w-12 md:w-14 lg:w-auto h-auto"
                     />
-                  </span>{" "}
-                  design studio
+                  </span>
                 </h1>
                 <p className="mb-10 mt-6 text-lg leading-[1.4] md:mb-14 lg:text-[21px]">
                   We&apos;re a creative design studio specializing in meeting
