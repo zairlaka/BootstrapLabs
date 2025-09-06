@@ -1,6 +1,8 @@
-// src/components/Footer.tsx
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import CalEmbed from "@calcom/embed-react";
 
 export default function Footer() {
   return (
@@ -41,25 +43,13 @@ export default function Footer() {
                     <ul className="mt-12 flex flex-col gap-y-3">
                       <li>
                         <span className="block font-syne text-[21px] font-bold leading-[1.42] text-colorLightLime">
-                          Give us a call:
-                        </span>
-                        <a
-                          href="tel:+1234567890"
-                          className="text-[21px] leading-[1.42] text-colorButteryWhite"
-                        >
-                          (123) 456-7890
-                        </a>
-                      </li>
-
-                      <li>
-                        <span className="block font-syne text-[21px] font-bold leading-[1.42] text-colorLightLime">
                           Send us an email:
                         </span>
                         <a
-                          href="mailto:yourmail@email.com"
+                          href="mailto:hello@bootstrappedlabs.com"
                           className="text-[21px] leading-[1.42] text-colorButteryWhite"
                         >
-                          yourmail@email.com
+                          hello@bootstrappedlabs.com
                         </a>
                       </li>
                     </ul>
@@ -160,16 +150,6 @@ export default function Footer() {
                     </div>
                     {/* Social Link */}
                   </div>
-
-                  <div className="hidden lg:inline-block">
-                    <Image
-                      src="/assets/img/elemnts/element-light-lime-curve-arrow.svg"
-                      alt="element"
-                      width={284}
-                      height={153}
-                      className="h-auto max-w-52 lg:inline-block xl:max-w-full"
-                    />
-                  </div>
                 </div>
               </div>
               {/* Footer Left Block */}
@@ -177,57 +157,29 @@ export default function Footer() {
               {/* Footer Right Block */}
               <div>
                 <span className="display-heading display-heading-5 mb-[30px] block text-colorButteryWhite">
-                  Send us a message
+                  Book a free consultation
                 </span>
-
-                <form
-                  action="#"
-                  method="post"
-                  className="flex flex-col gap-y-6"
-                >
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full rounded-[50px] border border-[#cccccc] bg-transparent px-6 py-5 text-base font-bold leading-none text-white placeholder:text-[#cccccc]"
-                    required
+                <div className="hidden lg:inline-block mt-20">
+                  <Image
+                    src="/assets/img/elemnts/element-light-lime-curve-arrow.svg"
+                    alt="element"
+                    width={284}
+                    height={153}
+                    className="h-auto max-w-52 lg:inline-block xl:max-w-full -rotate-45"
                   />
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="w-full rounded-[50px] border border-[#cccccc] bg-transparent px-6 py-5 text-base font-bold leading-none text-white placeholder:text-[#cccccc]"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Your phone number"
-                    className="w-full rounded-[50px] border border-[#cccccc] bg-transparent px-6 py-5 text-base font-bold leading-none text-white placeholder:text-[#cccccc]"
-                    required
-                  />
-                  <textarea
-                    placeholder="Write your message here..."
-                    className="min-h-[150px] w-full rounded-[20px] border border-[#cccccc] bg-transparent px-6 py-5 text-base font-bold leading-none text-white placeholder:text-[#cccccc]"
-                    required
-                  />
-
-                  <button
-                    type="submit"
-                    className="btn-primary relative justify-start pr-20 md:pr-[118px]"
-                  >
-                    Send message
-                    <span className="absolute right-[5px] inline-flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-black">
-                      <Image
-                        src="/assets/img/icons/icon-buttery-white-arrow-right.svg"
-                        alt="send"
-                        width={34}
-                        height={28}
-                      />
-                    </span>
-                  </button>
-                </form>
+                </div>
               </div>
               {/* Footer Right Block */}
             </div>
             {/* Footer Top Area */}
+          </div>
+          <div className="mt-10">
+            <CalEmbed
+              calLink="bootstrappedlabs"
+              config={{
+                theme: "dark", // or "light"
+              }}
+            />
           </div>
         </div>
         {/* Footer Top */}

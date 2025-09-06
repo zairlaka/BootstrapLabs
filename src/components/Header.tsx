@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,12 +21,13 @@ export default function Header() {
 
           {/* Header Right Block */}
           <div className="flex items-center gap-x-6">
-            <Link
-              href="#contact"
+            <button
+              data-cal-link="bootstrappedlabs"
+              data-cal-config='{"theme":"dark"}'
               className="btn-primary relative hidden px-[30px] py-[10px] sm:inline-flex"
             >
               Contact Us
-            </Link>
+            </button>
 
             {/* Responsive Offcanvas Menu Button */}
             <div className="block lg:hidden">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import BootstrappedCard from "./BootstrappedCard";
 
 export default function Hero() {
   return (
@@ -7,13 +7,13 @@ export default function Hero() {
       <div className="bg-black">
         <div className="pb-20 pt-[150px] lg:pb-[100px] lg:pt-[196px] xl:pb-[130px]">
           <div className="container">
-            <div className="relative z-10 grid grid-cols-1 items-center gap-x-[90px] gap-y-16 lg:grid-cols-[1fr_minmax(0,0.6fr)]">
+            <div className="relative z-10 grid grid-cols-1 items-center gap-x-[56px] gap-y-16 lg:grid-cols-[1fr_minmax(0,0.8fr)]">
               {/* Left */}
               <div className="text-center text-colorButteryWhite lg:text-start">
                 <h1>
-                  Bootstraped
+                  Ruby on Rails
                   <span className="inline-flex items-center gap-5">
-                    Labs
+                    Experts
                     <Image
                       src="/assets/img/elemnts/shape-light-lime-5-arms-star.svg"
                       alt="Star"
@@ -24,10 +24,8 @@ export default function Hero() {
                   </span>
                 </h1>
                 <p className="mb-10 mt-6 text-lg leading-[1.4] md:mb-14 lg:text-[21px]">
-                  We&apos;re a creative design studio specializing in meeting
-                  the needs of the new generation. We offer innovative and
-                  cutting-edge design solutions to help our clients stand out in
-                  today&apos;s fast-paced world.
+                  Our approach to MVP development combines speed, scalability,
+                  and reliability, powered by Ruby on Rails.
                 </p>
                 <div className="mb-[50px] flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                   <div className="flex -space-x-3">
@@ -57,8 +55,10 @@ export default function Hero() {
                     Believed by more than a thousand people
                   </span>
                 </div>
-                <Link
-                  href="#contact"
+
+                <button
+                  data-cal-link="bootstrappedlabs"
+                  data-cal-config='{"theme":"dark"}'
                   className="btn-primary relative pr-20 md:pr-[118px]"
                 >
                   Book a free consultation
@@ -70,18 +70,12 @@ export default function Hero() {
                       height={30}
                     />
                   </span>
-                </Link>
+                </button>
               </div>
 
               {/* Right */}
-              <div className="mx-auto inline-block max-w-[495px] overflow-hidden rounded-[25px] bg-colorButteryWhite p-[5px] lg:mx-0">
-                <Image
-                  src="/assets/img/images/th-1/hero-img.jpg"
-                  alt="Hero Image"
-                  width={485}
-                  height={540}
-                  className="rounded-[20px] object-cover"
-                />
+              <div className="mx-auto inline-block max-w-fit overflow-hidden rounded-[25px] bg-colorButteryWhite p-[5px] lg:mx-0">
+                <BootstrappedCard />
               </div>
 
               {/* Decorative element */}

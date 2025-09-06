@@ -4,31 +4,31 @@ import Image from "next/image";
 
 const services = [
   {
-    icon: "/assets/img/icons/th-1-service-icon-1.svg",
-    title: "UI/UX Design",
+    icon: "/assets/img/icons/th-1-service-icon-3.svg",
+    title: "MVP Development",
     description:
-      "Focusing on user interface (UI) and user experience (UX) design to enhance the usability and accessibility of digital products & app.",
+      "Every MVP we build is designed to scale seamlessly as your business expands. We guide you through every stage, strategy, design, development, and beyond.",
     delay: "0",
   },
   {
     icon: "/assets/img/icons/th-1-service-icon-2.svg",
-    title: "Graphic Design",
+    title: "Digital Marketing",
     description:
-      "Creating visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral.",
+      "Get target oriented Social Media Marketing services to reach the related customer market by our Social Media Experts. Build meaningful connections with your audience through creative, engaging campaigns.",
     delay: "0.3",
   },
   {
-    icon: "/assets/img/icons/th-1-service-icon-3.svg",
-    title: "Web Design",
+    icon: "/assets/img/icons/th-1-service-icon-4.svg",
+    title: "AI Powered & Automation",
     description:
-      "Designing and developing websites to ensure they are visually look and appealing, user-friendly, and functional your website.",
+      "Make your business Smarter, Faster & Efficient with AI-Powered Solutions and Automation.",
     delay: "0.6",
   },
   {
-    icon: "/assets/img/icons/th-1-service-icon-4.svg",
-    title: "Motion Graphics",
+    icon: "/assets/img/icons/th-1-service-icon-1.svg",
+    title: "Web & Mobile App",
     description:
-      "Creating animated graphics, videos for various purposes, including marketing and entertainment. To help sell a product or service.",
+      "Designing the UI/UXe for mobile apps and web applications to ensure usability & engagement.",
     delay: "0.9",
   },
 ];
